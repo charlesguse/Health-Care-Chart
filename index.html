@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="./hcc.js"></script>
+    </head>
+
+    <body>
+        <div id="chart_div"></div>
+        <div id="controls">
+            <form id="insurancePlansForm">
+                <input type="button" value="Update Chart" onClick="updateChart();" />
+                <div >
+                    <table id="insurancePlansTable" border="1">
+                        <tr>
+                            <th>Name</th>
+                            <th>Premium</th>
+                            <th>Pay Period</th>
+                            <th>Deductible</th>
+                            <th>Percentage YOU pay after deductible</th>
+                            <th>Out of Pocket Maximum</th>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+            <input type="submit" value="Add Row" onClick="addRow();" />
+        </div>
+    </body>
+</html>
