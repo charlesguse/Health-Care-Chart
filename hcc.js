@@ -19,12 +19,12 @@ function loadPage()
 function fillRow(data)
 {
     var row = "".concat('<tr>',
-                            '<th>$<input type="text" name="name' + currentRow + '" value="' + data.name + '" /></th>',
-                            '<th>$<input type="text" name="premium' + currentRow + '" value="' + data.premium + '" /></th>',
-                            '<th><input type="text" name="payPeriod' + currentRow + '" value="' + data.payPeriod + '" /></th>',
-                            '<th>$<input type="text" name="deductible' + currentRow + '" value="' + data.deductible + '" /></th>',
-                            '<th><input type="text" name="percentage' + currentRow + '" value="' + data.percentage + '" />%</th>',
-                            '<th>$<input type="text" name="oopMax' + currentRow + '" value="' + data.oopMax + '" /></th>',
+                            '<th>$<input type="text" name="name' + currentRow + '" value="' + data.name + '" size="12" /></th>',
+                            '<th>$<input type="text" name="premium' + currentRow + '" value="' + data.premium + '" size="4" /></th>',
+                            '<th><input type="text" name="payPeriod' + currentRow + '" value="' + data.payPeriod + '" size="1" /></th>',
+                            '<th>$<input type="text" name="deductible' + currentRow + '" value="' + data.deductible + '" size="3" /></th>',
+                            '<th><input type="text" name="percentage' + currentRow + '" value="' + data.percentage + '" maxlength="3" size="1" />%</th>',
+                            '<th>$<input type="text" name="oopMax' + currentRow + '" value="' + data.oopMax + '" size="4" /></th>',
                         '</tr>');
     // I hate javascript so much right now for doing ' + currentRow + '
     ++currentRow;
@@ -89,7 +89,7 @@ function drawChart(choices)
                    'width':800,
                    'height':600,
                    'hAxis': {title: 'Medical Costs'},
-                   'vAxis': {title: 'Your Costs'},
+                   'vAxis': {title: 'Your Costs'}
                    };
 
     var wrapper = new google.visualization.ChartWrapper({
